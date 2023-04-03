@@ -3,14 +3,17 @@
  *
  * Answer the following questions using multi-line comments in your code, at the top. (5%)
  *
- * Can you complete this without using arrays? What is the least number of variables you can use to solve this problem?
+ * Q: Can you complete this without using arrays? What is the least number of variables you can use to solve this problem?
+ * A: We can use list instead of array and add elements by reading file once.
  *
- * Can you use just one array to solve this? What would the data type be of that array?
- * You can use one array which contains strings read from the file if you make a separate class which takes in a numerator and denominator of a fraction.
- * What does it mean to make a class so another class is inside (or part of) the first class, so that it is composed of other data types?  What does "composition" mean in that case?  How is it done?
+ * Q: Can you use just one array to solve this? What would the data type be of that array?
+ * A: You can use one array which contains Fraction instances with both numerator and denominator as properties.
  *
- * What are some solutions to the reduction problem other than Euclid's GCD algorithm?
- * You can get both fractions to a common denominator and compare them.
+ * Q: What does it mean to make a class so another class is inside (or part of) the first class, so that it is composed of other data types?  What does "composition" mean in that case?  How is it done?
+ * A: We can create inner nested class, to have access to internal properties, and have inner class logically bound to outer class if no plans to use outside. This is more logical composition.
+ *
+ * Q: What are some solutions to the reduction problem other than Euclid's GCD algorithm?
+ * A: You can get both fractions to a common denominator and compare them.
  */
 package ichesnokov.uwb.org;
 
@@ -19,7 +22,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FractionsApp {
-
     public static void main(String[] args) {
         String filename = "fractions.txt";
         //String filename = args[0];
