@@ -21,7 +21,8 @@ import java.util.Scanner;
 public class FractionsApp {
 
     public static void main(String[] args) {
-        String filename = args[0];
+        String filename = "fractions.txt";
+        //String filename = args[0];
 
         // count number of fractions / lines in input file in order to create array of proper size
         Scanner is = null;
