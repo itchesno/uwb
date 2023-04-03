@@ -20,30 +20,7 @@ import java.util.Scanner;
 
 public class FractionsApp {
 
-    // Fraction[] = new Fraction[count];
-    // f[index] = new Fraction(Integer.parseInt(fraction[0]), Integer.parseInt(fraction[1]));
-    //
-    // f[i].isEqual(f[j])
-    //
-    // Fraction f = new Fraction(1, 2);
-    //      f.num == 1
-    //      f.den == 2
-    class Fraction {
-        int num;
-        int den;
-
-        Fraction(int num, int den) {
-            this.num = num;
-            this.den = den;
-        }
-
-        boolean isEqual(Fraction other) {
-            return this.num * other.den == other.num * this.den;
-        }
-    }
-
     public static void main(String[] args) {
-        //String filename = "resources\\fractions.txt";
         String filename = args[0];
 
         // count number of fractions / lines in input file in order to create array of proper size
@@ -63,7 +40,7 @@ public class FractionsApp {
             }
         }
 
-        // read from file
+        // open scanner and call count method
         is = null;
         try {
             is = new Scanner(new FileInputStream(filename));
@@ -84,10 +61,8 @@ public class FractionsApp {
         while (is.hasNext()) {
             String line = is.next();
             String[] fraction = line.split("/");
-
             num[index] = Integer.parseInt(fraction[0]);
             den[index] = Integer.parseInt(fraction[1]);
-
             index++;
         }
 
@@ -109,7 +84,7 @@ public class FractionsApp {
         }
     }
 
-    // Checks if two given fractions are equal and returns a boolean
+    // Checks if two given fractions are equal
     public static boolean isSameFraction(int num1, int den1, int num2, int den2) {
         return num1 * den2 == num2 * den1;
     }
