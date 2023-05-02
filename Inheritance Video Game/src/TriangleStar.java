@@ -40,7 +40,7 @@ public class TriangleStar extends Shape {
     /**
      * Very rough approximation of polygon area.
      *
-     * @return approximation of area
+     * @return approximation of shape area
      */
     public double getArea() {
         return Math.PI * radius * radius;

@@ -363,15 +363,15 @@ public class VideoGame1 extends JFrame implements KeyListener, ActionListener  {
 
         // tests for Polygon
         Polygon p2 = new Polygon(0, 0, 17);
-        printTestResult();
+        printTestResult("polygon area", p2.getArea() < 2 * Math.PI * 17 * 17);
 
         //tests for Triangle Star
         TriangleStar t1 = new TriangleStar(0, 0);
-        printTestResult();
+        printTestResult("TriangleStar area", t1.getArea() > 0);
 
         //tests for Snowman
         Snowman s1 = new Snowman(0, 0, 7);
-        printTestResult();
+        printTestResult("TriangleStar area", s1.getArea() > 0);
     }
 
     private static void printTestResult(String testName, boolean isPassed) {

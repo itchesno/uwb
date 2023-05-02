@@ -1,17 +1,17 @@
 import java.awt.*;
 
 /**
- * Class responsible for creation of a circle
+ * Implements circle shape with center at (x, y).
  */
 public class Circle extends Shape {
 
     /**
-     * default color of the circle
+     * Default color of the circle
      */
     public static final Color DEFAULT_COLOR = Color.RED;
 
     /**
-     * default radius of the circle
+     * Default radius of the circle
      */
     public static final int DEFAULT_RADIUS = 10;
 
@@ -19,16 +19,16 @@ public class Circle extends Shape {
     private Color color;
 
     /**
-     * constructor which takes in an x and y coordinate
-     * @param x
-     * @param y
+     * Creates circle with default radius and color.
+     * @param x x-coord of circle center
+     * @param y y-coord of circle center
      */
     public Circle(int x, int y) {
         this(x, y, DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     /**
-     * constructor which takes in x and y coordinates as well as a radius
+     * Creates circle with default color.
      * @param x
      * @param y
      * @param radius
@@ -38,7 +38,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * constructor which takes in x and y coordinates as well as radius and color
+     * Creates circle at the passed position, with passed radius and color.
      * @param x
      * @param y
      * @param radius
@@ -51,24 +51,24 @@ public class Circle extends Shape {
     }
 
     /**
-     * returns the radius of the circle
-     * @return
+     * Returns the radius of the circle.
+     * @return radius of circle
      */
     public int getRadius() {
         return this.radius;
     }
 
     /**
-     * returns area of the circle
-     * @return
+     * Returns area of the circle.
+     * @return area of the circle
      */
     public double getArea() {
         return Math.PI * radius * radius;
     }
 
     /**
-     * takes in a graphic object and draws a circle
-     * @param g
+     * Draws this circle shape.
+     * @param g Graphics to draw the shape
      */
     public void draw(Graphics g) {
         int x = getX();   // the center of the star is
